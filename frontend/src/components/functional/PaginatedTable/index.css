@@ -1,0 +1,570 @@
+section.section-table {
+	position: relative;
+
+	border-left: 1rem solid transparent;
+	border-right: 1rem solid transparent;
+}
+
+section.section-table header {
+	padding: 0.75rem 0.75rem;
+
+	border-radius: 0.2rem 0.2rem 0 0;
+	border-top: 1px solid #dfdfdf;
+	border-left: 1px solid #dfdfdf;
+	border-right: 1px solid #dfdfdf;
+
+	background-color: #ffffff;
+}
+
+section.section-table footer {
+	padding: 0.75rem;
+
+	display: flex;
+	justify-content: center;
+
+	border-radius: 0 0 0.2rem 0.2rem;
+	border-bottom: 1px solid #dfdfdf;
+	border-left: 1px solid #dfdfdf;
+	border-right: 1px solid #dfdfdf;
+
+	background-color: #ffffff;
+}
+
+section.section-table main.main-paginated {
+	position: relative;
+	/* padding: 0 0.75rem; */
+	height: 12rem;
+	overflow-x: auto;
+	overflow-y: hidden;
+
+	border: 1px solid #dfdfdf;
+
+	background-color: #ffffff;
+
+	transition: 200ms;
+}
+
+section.section-table header {
+	display: flex;
+}
+
+section.section-table header div.div-table-title {
+	flex-grow: 1;
+}
+
+section.section-table header div.div-table-config {
+	position: relative;
+
+	width: 8rem;
+	height: 1.25rem;
+
+	border: 1px solid #dfdfdf;
+	border-radius: 0.2rem;
+
+	background-color: #ffffff;
+
+	user-select: none;
+}
+
+section.section-table header div.div-table-config div.div-table-config-overlay {
+	position: absolute;
+
+	top: 0;
+
+	width: calc(100% - 0.75rem);
+	height: 100%;
+
+	padding: 0 0.25rem 0 0.5rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-size: 0.75rem;
+	line-height: 0.75rem;
+	text-align: center;
+
+	border-radius: 0.2rem;
+
+	cursor: pointer;
+
+	transition: 100ms;
+}
+
+section.section-table header div.div-table-config div.div-table-config-options {
+	position: absolute;
+
+	top: 1.6rem;
+
+	padding: 0.25rem;
+
+	width: calc(100% - 0.5rem);
+
+	background-color: #ffffff;
+
+	border: 1px solid #dfdfdf;
+	border-radius: 0.2rem;
+
+	z-index: 1;
+
+	opacity: 0;
+	visibility: collapse;
+
+	transition: 200ms ease-out;
+
+	transform: scaleY(0.75);
+	transform-origin: top;
+}
+
+section.section-table header div.div-table-config div.div-table-config-options div.div-table-config-option {
+	padding: 0.25rem;
+
+	height: 0.75rem;
+
+	display: flex;
+
+	font-size: 0.75rem;
+	line-height: 0.75rem;
+
+	border-radius: 0.2rem;
+
+	transition: 100ms;
+
+	cursor: pointer;
+}
+
+section.section-table header div.div-table-config div.div-table-config-options div.div-table-config-option:hover {
+	background-color: #efefef;
+}
+
+section.section-table header div.div-table-config div.div-table-config-options div.div-table-config-option:active {
+	background-color: #dfdfdf;
+}
+
+section.section-table header div.div-table-config div.div-table-config-options div.div-table-config-desc {
+	padding: 0.25rem;
+
+	height: 0.75rem;
+
+	color: #7f7f7f;
+	font-size: 0.625rem;
+	line-height: 0.625rem;
+}
+
+/* section.section-table header div.div-table-config div.div-table-config-options div.div-table-config-option input[type="checkbox"] {
+	float: right;
+
+	width: 0.5rem;
+	height: 0.5rem;
+}
+
+section.section-table header div.div-table-config div.div-table-config-options div.div-table-config-option input[type="checkbox"]:checked {
+	width: 0.5rem;
+	height: 0.5rem;
+} */
+
+section.section-table header div.div-table-config.div-table-config-open div.div-table-config-options {
+	opacity: 1;
+	visibility: visible;
+
+	transform: scaleY(1);
+}
+
+/* section.section-table header div.div-table-config div.div-table-config-overlay span.span-table-dropdown {
+	color: #7f7f7f;
+
+	font-size: 0.75rem;
+	font-weight: 400;
+
+	transition: 200ms ease-out;
+
+	transform: rotate(0);
+}
+
+section.section-table header div.div-table-config.div-table-config-open div.div-table-config-overlay span.span-table-dropdown {
+	transform: rotate(0.5turn);
+}
+
+section.section-table header div.div-table-config div.div-table-config-overlay span.span-table-dropdown span.span-table-dropdown-icon {
+	display: inline-block;
+	transform: scaleX(1.8);
+} */
+
+section.section-table header div.div-table-config div.div-table-config-overlay span.span-table-dropdown {
+	width: 1rem;
+	height: 1rem;
+	display: inline-block;
+
+	color: #7f7f7f;
+
+	font-size: 0.75rem;
+	font-weight: 400;
+
+	transition: 200ms ease-out;
+
+	transform: rotate(0);
+}
+
+section.section-table header div.div-table-config div.div-table-config-overlay span.span-table-dropdown img {
+	width: 1rem;
+	height: 1rem;
+
+	color: #7f7f7f;
+
+	font-size: 0.75rem;
+	font-weight: 400;
+
+	transition: 200ms ease-out;
+
+	transform: rotate(0);
+}
+
+section.section-table header div.div-table-config.div-table-config-open div.div-table-config-overlay span.span-table-dropdown {
+	transform: rotate(0.5turn);
+}
+
+/* section.section-table header div.div-table-config.div-table-config-open div.div-table-config-overlay span.span-table-dropdown span.span-table-dropdown-icon {
+	transform: rotate(-0.5turn);
+} */
+
+section.section-table header div.div-table-config div.div-table-config-overlay:hover {
+	background-color: #0000000f;
+}
+
+section.section-table header button.button-drill {
+	margin: 0;
+	padding: 0 0.5rem 0 0.5rem;
+
+	width: 100%;
+	height: 100%;
+
+	border: none;
+	border-radius: 0.2rem;
+
+	font-size: 0.75rem;
+	line-height: 0.75rem;
+}
+
+section.section-table header button.button-collapse {
+	margin: 0;
+	padding: 0 0.25rem 0 0.5rem;
+
+	width: 100%;
+	height: 100%;
+
+	border: none;
+	border-radius: 0.2rem;
+
+	font-size: 0.75rem;
+	line-height: 0.75rem;
+}
+
+section.section-table header button.button-collapse {
+	display: flex;
+	justify-content: space-between;
+}
+
+section.section-table header button.button-collapse img {
+	width: 0.875rem;
+	height: 0.875rem;
+}
+
+section.section-table footer span.span-footer-status {
+	display: inline-block;
+
+	padding: 0rem 0.25rem;
+	font-size: 0.75rem;
+	line-height: 1.25rem;
+	font-weight: bold;
+
+	border-radius: 0.2rem;
+}
+
+section.section-table footer span.span-footer-left {
+	flex-grow: 1;
+	flex-basis: 0;
+}
+
+section.section-table footer span.span-footer-right {
+	flex-grow: 1;
+	flex-basis: 0;
+
+	text-align: right;
+}
+
+section.section-table footer span.span-footer-match {
+	color: #1f9f1f;
+
+	background: #dfffdf;
+
+	border: 1px solid #7fdf7f;
+}
+
+section.section-table footer span.span-footer-none {
+	color: #9f1f1f;
+
+	background: #ffdfdf;
+
+	border: 1px solid #df7f7f;
+}
+
+section.section-table footer span.span-paginate {
+	display: inline-block;
+
+	min-width: 7rem;
+
+	text-align: center;
+	vertical-align: top;
+}
+
+section.section-table footer button.button-paginate {
+	border: none;
+
+	margin: 0 0.5rem;
+	width: 1.25rem;
+	height: 1.25rem;
+
+	user-select: none;
+}
+
+section.section-table footer button.button-paginate:disabled {
+	background-color: transparent;
+
+	opacity: 0.5;
+}
+
+section.section-table footer input {
+	border: 1px solid #dfdfdf;
+
+	width: 3rem;
+	height: 1rem;
+
+	/* color: #dfdfdf; */
+	font-size: 0.8rem;
+	vertical-align: top;
+}
+
+section.section-table footer button img {
+	width: 75%;
+	height: 75%;
+}
+
+/* section.section-table footer span.span-footer-match {
+	color: #007fff;
+
+	background: #bfdfff;
+
+	border: 1px solid #4fbfff;
+}
+
+section.section-table footer span.span-footer-none {
+	color: #3f3f3f;
+
+	background: #dfdfdf;
+
+	border: 1px solid #bfbfbf;
+} */
+
+section.section-table div.div-table-action {
+	margin: 0 0 0 0.5rem;
+	padding: 0;
+	height: 1.25rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: 1px solid #dfdfdf;
+	border-radius: 0.2rem;
+}
+
+section.section-table div.div-table-collapse {
+	margin: 0 0 0 0.5rem;
+	width: 5rem;
+}
+
+section.section-table div.div-table-action img {
+	width: 1rem;
+	height: 1rem;
+
+	color: #7f7f7f;
+
+	font-size: 0.75rem;
+	font-weight: 400;
+
+	transition: 200ms ease-out;
+
+	transform: rotate(0);
+}
+
+section.section-table div.div-column-name {
+	display: flex;
+	flex-grow: 1;
+	min-width: 0;
+}
+
+section.section-table span.span-column-name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+section.section-table span.span-column-status {
+	display: flex;
+}
+
+section.section-table div.div-table-no-data {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: #7f7f7f;
+}
+
+section.section-table table {
+	width: 100%;
+
+	font-size: 1rem;
+
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+section.section-table thead {
+	position: sticky;
+
+	top: 0;
+
+	display: table-header-group;
+
+	text-align: left;
+
+	background-color: #ffffff;
+}
+
+section.section-table thead th {
+	padding: 0.5rem 1rem;
+
+	height: 1rem;
+
+	line-height: 1rem;
+
+	vertical-align: middle;
+
+	visibility: visible;
+}
+
+section.section-table thead th.th-pin {
+	padding: 0.5rem 1rem;
+
+	height: 1rem;
+
+	line-height: 1rem;
+
+	vertical-align: middle;
+
+	visibility: visible;
+}
+
+section.section-table tr {
+	height: 2rem;
+
+	scroll-snap-align: start;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	transition: 100ms;
+}
+
+section.section-table tr.tr-hoverable:hover {
+	background-color: rgb(180, 225, 255);
+	cursor: pointer;
+}
+
+section.section-table tr.tr-active {
+	background-color: rgb(101, 181, 247);
+}
+
+section.section-table tr.tr-highlight {
+	background-color: rgb(101, 247, 118);
+}
+
+section.section-table tr.tr-loading-indicator {
+	height: 6rem;
+
+	display: table-row;
+
+	position: relative;
+}
+
+section.section-table div.div-loading-indicator-wrapper {
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+section.section-table div.div-loading-indicator {
+	width: 50%;
+	height: 75%;
+}
+
+section.section-table div.div-loading-text {
+	width: 50%;
+	height: 25%;
+
+	text-align: center;
+	font-size: small;
+}
+
+section.section-table div.div-tag {
+	padding: 0 0.25rem;
+	display: inline-block;
+
+	font-size: 0.6rem;
+	font-weight: normal;
+	line-height: 1rem;
+
+	background-color: #cfefff;
+
+	border-radius: 0.5rem;
+}
+
+section.section-table div.div-type {
+	padding: 0 0.25rem;
+	display: inline-block;
+
+	color: #7f7f7f;
+	font-size: 0.6rem;
+	font-weight: normal;
+	line-height: 1rem;
+}
+
+section.section-table td {
+	padding: 0 1rem;
+	height: 2rem;
+
+	scroll-snap-align: end;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+section.section-table input.input-search {
+	width: 5rem;
+
+	border: 1px solid #dfdfdf;
+
+	margin-right: 0.5rem;
+}

@@ -1,0 +1,122 @@
+section.section-linker {
+    margin: 0 1rem;
+}
+
+div.div-linker-line {
+    margin: 0 auto;
+
+    width: 1px;
+
+    flex-grow: 1;
+
+    background-color: #dfdfdf;
+}
+
+div.div-linker-middle {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+div.div-linker-center {
+    width: 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+div.div-linker-left {
+    flex-grow: 1;
+    flex-basis: 0;
+
+    margin: 0 0.5rem 0 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: right;
+}
+
+div.div-linker-right {
+    flex-grow: 1;
+    flex-basis: 0;
+
+    margin: 0 0 0 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    font-size: 1rem;
+    line-height: 1rem;
+    text-align: left;
+}
+
+div.div-linker-left-item {
+    margin: 0.5rem 0 0 0;
+    padding: 0.5rem;
+    display: inline-block;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dfdfdf;
+    border-radius: 0.2rem;
+}
+
+div.div-linker-left-item:last-of-type {
+    margin: 0.5rem 0;
+}
+
+div.div-linker-right-item {
+    margin: 0.5rem 0 0 0;
+    padding: 0.5rem;
+    display: inline-block;
+
+    font-weight: bold;
+
+    background-color: #ffffff;
+
+    border: 1px solid #dfdfdf;
+    border-radius: 0.2rem;
+}
+
+div.div-linker-right-item.div-linker-item-none {
+    /* font-style: italic; */
+    color: #9f1f1f;
+
+    background: #ffdfdf;
+
+    border: 1px solid #df7f7f;
+}
+
+div.div-linker-right-item:last-of-type {
+    margin: 0.5rem 0;
+}
+
+div.div-linker-icon-wrapper {
+    /* width: calc(2rem - 2px);
+    height: calc(2rem - 2px); */
+    width: 2rem;
+    height: 2rem;
+
+    border: 1px solid #dfdfdf;
+    border-radius: 0.2rem;
+
+    background-color: #ffffff;
+}
+
+div.div-linker-center img {
+    margin: 0.375rem;
+    /* margin: calc(0.375rem - 1px); */
+
+    width: 1.25rem;
+    height: 1.25rem
+}

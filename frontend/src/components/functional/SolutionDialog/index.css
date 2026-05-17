@@ -1,0 +1,35 @@
+div.div-dialog {
+	border-top: 1rem solid transparent;
+	border-left: 1rem solid transparent;
+	border-right: 1rem solid transparent;
+}
+
+div.div-solution-dialog {
+	padding: 1rem;
+
+	border: 1px solid #dfdfdf;
+	border-radius: 0.2rem;
+
+	background-color: #ffffff;
+}
+
+span.span-solution {
+	display: inline-block;
+}
+
+span.span-solution-accepted {
+	color: #00bf00;
+}
+
+span.span-solution-incorrect {
+	color: #bf0000;
+}
+
+img.img-solution {
+	display: inline-block;
+
+	width: 1rem;
+	height: 1rem;
+
+	vertical-align: sub;
+}

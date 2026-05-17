@@ -1,0 +1,78 @@
+version: "3"
+
+services:
+  postgres:
+    build:
+      context: hnrq-db/sargsum/docker/postgres
+      dockerfile: Dockerfile
+      args:
+        - USER=${DB_USER}
+        - GROUP=${DB_USER}
+        - PASSWD=${DB_PASSWORD}
+    environment:
+      TZ: "America/New_York"
+      PGTZ: "America/New_York"
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      PG_DATA: /var/lib/postgresql/data
+    volumes:
+      # - ./docker/postgres/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ${PWD}/hnrq-db/setup.sh:/docker-entrypoint-initdb.d/setup.sh
+      - postgres-data:/var/lib/postgresql/data
+      - home-data:/home/${DB_USER}
+      - type: bind
+        source: ./hnrq-db
+        target: /home/${DB_USER}/shared
+        # do NOT make target the home directory because
+        # setup will write into it before bind takes effect
+    ports:
+      - "5432:5432"
+    expose:
+      - "5432"
+    networks:
+      - dbnet
+
+  # comment back ports section if run uwsgi without nginx
+  backend:
+    build: ./backend
+    container_name: backend
+    restart: always
+    # ports:
+    #   - "8080:8080"
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_PORT=${DB_PORT}
+    expose:
+      - "8080"
+    depends_on:
+      - postgres
+    networks:
+      - dbnet
+  
+  # nginx
+  nginx:
+    image: library/nginx:1
+    container_name: nginx
+    restart: unless-stopped
+    volumes:
+      - ./nginx/default-individual.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./frontend/build:/usr/share/nginx/html
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - backend
+    networks:
+      - dbnet
+
+volumes:
+  home-data:
+  postgres-data:
+
+networks:
+  dbnet:
+

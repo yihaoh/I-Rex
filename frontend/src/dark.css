@@ -1,0 +1,91 @@
+div.app.dark div.div-sidebar,
+div.app.dark div.div-main-top {
+	border-color: #3f3f3f;
+	background-color: #171717;
+}
+
+div.app.dark div.div-main {
+	background-color: #272727;
+}
+
+div.app.dark div.div-side-item {
+	border-top: 1px solid #3f3f3f;
+}
+
+div.app.dark div.div-side-title {
+	color: #ffffff;
+}
+
+div.app.dark div.div-view-switch {
+	background-color: #272727;
+}
+
+div.app.dark div.div-code {
+	background-color: #272727;
+	color: #ffffff;
+}
+
+div.app.dark div.div-lines {
+	background-color: #1f1f1f;
+}
+
+div.app.dark span.span-header-branding {
+	margin: 2rem 0 0 0;
+
+	color: #ffffff;
+	font-size: 2rem;
+	line-height: 2rem;
+}
+
+div.app.dark span.span-header-version {
+	margin: 2rem 0 0 0;
+
+	color: #7f7f7f;
+	font-size: 1rem;
+	vertical-align: top;
+}
+
+div.app.dark p.p-header-group {
+	margin: 0;
+
+	color: #ffffff;
+	font-size: 0.75rem;
+
+	text-align: center;
+}
+
+div.app.dark button {
+	background-color: #171717;
+	border: 1px solid #3f3f3f;
+	color: #ffffff;
+}
+
+div.app.dark button.button-primary {
+	background-color: #ffffff;
+	border: 1px solid #dfdfdf;
+	color: #000000;
+}
+
+div.app.dark button.button-view.button-view-active {
+	background-color: #3f3f3f;
+	color: #ffffff;
+}
+
+div.app.dark button.button-view {
+	background-color: transparent;
+	border: 1px solid #272727;
+	color: #ffffff;
+}
+
+div.app.dark button.button-view:hover {
+	background-color: #2f2f2f;
+}
+
+div.app.dark button.button-view-active:hover {
+	background-color: #3f3f3f;
+}
+
+div.app.dark textarea {
+	background-color: #1f1f1f;
+	color: #ffffff;
+}

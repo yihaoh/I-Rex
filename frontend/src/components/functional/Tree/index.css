@@ -1,0 +1,136 @@
+div.div-tree-root {
+    padding: 1rem;
+}
+
+div.div-tree-sublayer {
+    margin-left: 1rem;
+    border-left: 1px solid #dfdfdf;
+    padding-left: 1rem;
+}
+
+div.div-tree-node {
+    margin: 1rem 0;
+
+    height: 2rem;
+}
+
+span.span-tree-node {
+    display: block;
+
+    float: left;
+
+    margin: 0 0.5rem 0 0;
+    padding: 0.5rem;
+
+    height: 1rem;
+
+    font-size: 1rem;
+    line-height: 1rem;
+
+    background: #ffffff;
+
+    border: 1px solid #dfdfdf;
+    border-radius: 0.25rem;
+}
+
+span.span-tree-eval {
+    font-weight: bold;
+}
+
+span.span-tree-node-eval-true {
+    color: #1f9f1f;
+
+    background: #dfffdf;
+
+    border: 1px solid #7fdf7f;
+}
+
+span.span-tree-node-eval-false {
+    color: #9f1f1f;
+
+    background: #ffdfdf;
+
+    border: 1px solid #df7f7f;
+}
+
+span.span-tree-node-eval-null {
+    color: #3f3f3f;
+
+    background: #dfdfdf;
+
+    border: 1px solid #9f9f9f;
+}
+
+/* span.span-tree-node-eval-true {
+    color: #1f57bf;
+
+    background: #afcfff;
+
+    border: 1px solid #4f9fff;
+} */
+
+/* span.span-tree-node-eval-true {
+    color: #009fff;
+
+    background: #bfdfff;
+
+    border: 1px solid #4fbfff;
+}
+
+span.span-tree-node-eval-false {
+    color: #3f3f3f;
+
+    background: #cfcfcf;
+
+    border: 1px solid #9f9f9f;
+} */
+
+input.input-tree-node {
+    display: none;
+}
+
+label.label-tree-node {
+    display: block;
+
+    float: left;
+
+    padding: 0.5rem;
+
+    height: 1rem;
+
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+
+    user-select: none;
+
+    cursor: pointer;
+}
+
+label.label-tree-node-end {
+    display: block;
+
+    float: left;
+
+    padding: 0.5rem;
+
+    height: 1rem;
+
+    visibility: hidden;
+}
+
+img.img-tree-node {
+    display: block;
+
+    width: 1rem;
+    height: 1rem;
+
+    rotate: -0.25turn;
+
+    transition: 200ms ease-out;
+}
+
+/* div.div-tree-node.div-tree-node-active > img.img-tree-node  */
+
+input.input-tree-node[type='checkbox']:checked~label.label-tree-node>img.img-tree-node {
+    rotate: 0turn;
+}

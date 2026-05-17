@@ -1,0 +1,6 @@
+div.div-tree-section {}
+
+div.div-multitree-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
