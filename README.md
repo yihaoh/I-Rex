@@ -38,4 +38,7 @@ Go into the [UDF Directory](./hnrq-db/sargsum/), and follow the [instruction](./
 5. Now you can access I-Rex at `localhost:80`.
 
 ## Evaluation
-To reproduce the experiment results in the I-Rex research paper. Please go to the [Evaluation](./evaluation/) directory and follow the instructions in the corresponding [README](./evaluation/README).
+To reproduce the experiment results in the I-Rex research paper. Please go to the [Evaluation](./evaluation/) directory and follow the instructions in the corresponding [README](./evaluation/README.md).
+
+## Disclaimer
+This repository is not the main dev repository for I-Rex, but specifically created for the publication in PVLDB.
